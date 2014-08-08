@@ -10,7 +10,7 @@ Simply add the first three octets of the ip addresses that are giving you guff t
 ip_blocks = [
     '185.45.193.',
     '109.206.177.',
-    '62.113.250'
+    '62.113.250.'
 ]
 ```
 
