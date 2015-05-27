@@ -1,0 +1,27 @@
+*.pyc
+*.pyo
+*.swp
+*~
+.idea
+.idea*
+.vagrant
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+__pycache__
+database.db
+
+# Virtual environments
+env
+env*
+venv
+venv*
+venv2
+venv2*
+
+*.sublime-*

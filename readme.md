@@ -14,17 +14,21 @@ ip_blocks = [
 ]
 ```
 
-## Change reject_client path
+## Set the reject_client path
 
 Based on your os, your `reject_client` file might be someplace special. For centos, the path is `/etc/postfix/reject_client`.
 
-Change the path in both block.py and run.sh
+Just set your path as the first argument. 
+
+```
+python block.py <path/to/reject_client>
+```
 
 ## All setup?
 
 ```
-chmod a+x run.sh
-./run.sh
+chmod a+x block.py
+python block.py /etc/postfix/reject_client
 ```
 
 

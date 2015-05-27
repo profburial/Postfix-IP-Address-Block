@@ -1,6 +1,8 @@
-'''
-Build reject_clients list from ip blocks
-'''
+#!/usr/bin/env python
+""" Build reject_clients list from ip blocks """
+
+import os
+import sys
 
 # Add ip blocks
 ip_blocks = [
@@ -47,7 +49,11 @@ for ip in ip_blocks:
 reject = " REJECT \n".join(ips) + " REJECT"
 
 # Create new reject_clients
-file = open('/etc/postfix/reject_client', 'w+')
-file.write(reject)
+os.system('touch ' + sys.argv[1])
+reject_list = open(sys.argv[1], 'w+')
+reject_list.write(reject)
+
+# Restart postfix
+os.system('sudo service postfix restart')
 
 print 'Done!'
